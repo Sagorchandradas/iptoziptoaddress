@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>IP → ZIP / City / State + Phone</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>IP → ZIP / City / State</h1>
+    <p class="subtitle">Plus realistic US phone generator</p>
+  </header>
+  <main class="card">
+    <div class="input-row">
+      <input id="ipInput" placeholder="Enter IP or leave empty to auto-detect">
+      <button id="lookupBtn">Lookup</button>
+    </div>
+    <div id="loader" class="loader hidden">Checking…</div>
+    <div id="result" class="result hidden">
+      <div class="row"><span class="label">IP</span><span id="r_ip" class="value"></span></div>
+      <div class="row"><span class="label">ZIP</span><span id="r_zip" class="value"></span></div>
+      <div class="row"><span class="label">City</span><span id="r_city" class="value"></span></div>
+      <div class="row"><span class="label">State</span><span id="r_state" class="value"></span></div>
+      <div class="row"><span class="label">Country</span><span id="r_country" class="value"></span></div>
+      <div class="row"><span class="label">Phone</span><span id="r_phone" class="value"></span><button id="copyBtn" class="copy">Copy</button></div>
+    </div>
+    <div id="toast" class="toast hidden">Copied!</div>
+    <div id="error" class="error hidden"></div>
+    <footer class="foot">Built for Netlify — deploys to <code>/.netlify/functions/lookup</code></footer>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
